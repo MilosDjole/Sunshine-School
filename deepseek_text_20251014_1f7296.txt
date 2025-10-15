@@ -1,0 +1,29 @@
+SunshineSchool/
+├── 📄 index.html
+├── 📄 o-nama.html
+├── 📄 kontakt.html
+├── 📄 faq.html
+├── 📄 privatnost.html
+├── 📄 uslovi.html
+├── 📁 assets/
+│   ├── 📁 css/
+│   │   └── 🎨 style.css
+│   ├── 📁 js/
+│   │   └── ⚡ main.js
+│   └── 📁 images/
+│       ├── 🏫 logo-sunshine-school.png (vaš logo)
+│       ├── 🎓 hero-students.jpg
+│       ├── 📚 course-english.jpg
+│       ├── 📚 course-german.jpg
+│       ├── 📚 course-math.jpg
+│       ├── 📚 course-serbian.jpg
+│       └── 🖼️ placeholder.jpg
+├── 📁 kursevi/
+│   ├── 📄 index.html
+│   ├── 📄 engleski.html
+│   ├── 📄 nemacki.html
+│   ├── 📄 matematika.html
+│   └── 📄 srpski.html
+└── 📁 blog/
+    ├── 📄 index.html
+    └── 📄 prvi-blog-post.html

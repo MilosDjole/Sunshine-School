@@ -1,0 +1,15 @@
+{
+  "name": "sunshine-school-smederevo",
+  "version": "1.0.0",
+  "description": "Sunshine School Smederevo - Škola stranih jezika",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build process needed for static site'"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
