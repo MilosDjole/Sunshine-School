@@ -1,0 +1,465 @@
+@import "tailwindcss";
+
+/* ============================================
+   SUNSHINE SCHOOL - Global Styles
+   ============================================ */
+
+:root {
+  /* Brand Colors */
+  --sunshine-yellow: #FFD700;
+  --sun-yellow-light: #FFF176;
+  --sun-yellow-dark: #FFC107;
+  --deep-blue: #1976D2;
+  --sky-blue: #2196F3;
+  --light-blue: #BBDEFB;
+  --energy-orange: #FF6B35;
+  --warm-white: #FFF9E6;
+  --pure-white: #FFFFFF;
+  --warm-gray: #F5F5F5;
+  --medium-gray: #9E9E9E;
+  --dark-gray: #333333;
+  --success-green: #4CAF50;
+
+  /* Layout */
+  --header-height: 80px;
+  --topbar-height: 40px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s ease;
+}
+
+@theme {
+  /* Font Family Mapping */
+  --font-display: var(--font-poppins), 'Poppins', sans-serif;
+  --font-body: var(--font-open-sans), 'Open Sans', sans-serif;
+  --font-child: var(--font-comic-neue), 'Comic Neue', cursive;
+  --font-gothic: var(--font-gothic-a1), 'Gothic A1', sans-serif;
+
+  /* Brand Color Mapping - Creates utilities like bg-sunshine-yellow, text-deep-blue, etc. */
+  --color-sunshine-yellow: var(--sunshine-yellow);
+  --color-sun-yellow-light: var(--sun-yellow-light);
+  --color-sun-yellow-dark: var(--sun-yellow-dark);
+
+  --color-deep-blue: var(--deep-blue);
+  --color-sky-blue: var(--sky-blue);
+  --color-light-blue: var(--light-blue);
+
+  --color-energy-orange: var(--energy-orange);
+  --color-success-green: var(--success-green);
+
+  --color-warm-white: var(--warm-white);
+  --color-pure-white: var(--pure-white);
+  --color-warm-gray: var(--warm-gray);
+  --color-medium-gray: var(--medium-gray);
+  --color-dark-gray: var(--dark-gray);
+
+  /* Animations */
+  --animate-gentle-bounce: gentle-bounce 3s ease-in-out infinite;
+  --animate-gentle-pulse: gentle-pulse 2s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  /* Shadows */
+  --shadow-yellow-glow: 0 10px 20px rgba(255, 215, 0, 0.3);
+  --shadow-blue-glow: 0 10px 20px rgba(25, 118, 210, 0.3);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--pure-white);
+  color: var(--dark-gray);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--dark-gray);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.child-friendly {
+  font-family: 'Comic Neue', cursive;
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.btn-primary {
+  background-color: var(--sunshine-yellow);
+  color: var(--dark-gray);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--deep-blue);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--sky-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(25, 118, 210, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--deep-blue);
+  color: var(--deep-blue);
+}
+
+.btn-outline:hover {
+  background-color: var(--deep-blue);
+  color: white;
+}
+
+/* ============================================
+   Card Styles
+   ============================================ */
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Social Media Card Styles
+   ============================================ */
+
+.social-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.social-card.instagram::before {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-card.facebook::before {
+  background: #1877F2;
+}
+
+.social-card.tiktok::before {
+  background: linear-gradient(45deg, #00f2ea, #ff0050);
+}
+
+.social-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   Section Styles
+   ============================================ */
+
+.section {
+  padding: 4rem 1rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--medium-gray);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+/* ============================================
+   Hero Section Background
+   ============================================ */
+
+.hero-gradient {
+  background: linear-gradient(135deg,
+      rgba(255, 215, 0, 0.05) 0%,
+      rgba(25, 118, 210, 0.05) 100%);
+}
+
+/* ============================================
+   Container Utility
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes gentle-bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes gentle-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.animate-bounce-gentle {
+  animation: gentle-bounce 3s ease-in-out infinite;
+}
+
+.animate-pulse-gentle {
+  animation: gentle-pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ============================================
+   Responsive Navigation
+   ============================================ */
+
+.nav-link {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: var(--dark-gray);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--sunshine-yellow);
+  transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--deep-blue);
+}
+
+/* ============================================
+   Form Styles
+   ============================================ */
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  background-color: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--sunshine-yellow);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+.form-input::placeholder {
+  color: var(--medium-gray);
+}
+
+.form-label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--dark-gray);
+}
+
+/* ============================================
+   Map Section
+   ============================================ */
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .card,
+  .social-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
