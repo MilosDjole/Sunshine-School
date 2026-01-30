@@ -105,9 +105,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // TODO: Replace with actual Google Search Console verification code
-    // Get it from: https://search.google.com/search-console
-    // google: process.env.GOOGLE_SITE_VERIFICATION || "your-google-verification-code",
+    google: "gojrOG3grcQ0lm2MtBWcqBC6DjiQx1Zkohi0vwrc90A",
   },
   alternates: {
     canonical: "https://sunshineschool.rs",
