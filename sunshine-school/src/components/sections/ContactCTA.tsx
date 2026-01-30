@@ -159,7 +159,7 @@ export default function ContactCTA() {
                             <div className="p-4 bg-white rounded-xl shadow-sm">
                                 <p className="text-sm text-medium-gray mb-1">Ili nas pozovite direktno:</p>
                                 <a
-                                    href="tel:+381664330013"
+                                    href="tel:+38166433013"
                                     className="text-2xl font-display font-bold text-deep-blue hover:text-sky-blue transition-colors"
                                 >
                                     066 433 013

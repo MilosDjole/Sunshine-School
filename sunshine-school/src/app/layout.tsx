@@ -122,7 +122,7 @@ const jsonLd = {
   url: "https://sunshineschool.rs",
   logo: "https://sunshineschool.rs/logo.png",
   image: "https://sunshineschool.rs/og-image.png",
-  telephone: "+381664330013",
+  telephone: "+38166433013",
   email: "skolasunshine@gmail.com",
   address: {
     "@type": "PostalAddress",

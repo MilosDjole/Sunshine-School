@@ -17,7 +17,7 @@ export default function UsloviPage() {
                 <h1 className="font-display text-4xl font-bold text-dark-gray mb-8">
                     Uslovi korišćenja
                 </h1>
-                
+
                 <div className="prose prose-lg max-w-none text-medium-gray space-y-6">
                     <p className="text-sm text-medium-gray mb-8">
                         <strong>Poslednja izmena:</strong> 27. januar 2026.
@@ -28,8 +28,8 @@ export default function UsloviPage() {
                             1. Prihvatanje uslova
                         </h2>
                         <p>
-                            Pristupanjem i korišćenjem web sajta Sunshine School Smederevo (sunshineschool.rs), 
-                            prihvatate i saglašavate se sa ovim uslovima korišćenja. Ako se ne slažete sa ovim uslovima, 
+                            Pristupanjem i korišćenjem web sajta Sunshine School Smederevo (sunshineschool.rs),
+                            prihvatate i saglašavate se sa ovim uslovima korišćenja. Ako se ne slažete sa ovim uslovima,
                             molimo vas da ne koristite naš sajt.
                         </p>
                     </section>
@@ -42,7 +42,7 @@ export default function UsloviPage() {
                             <p className="mb-2"><strong>Sunshine School Smederevo</strong></p>
                             <p className="mb-2">Karađorđeva 44, 11300 Smederevo, Srbija</p>
                             <p className="mb-2">Email: <a href="mailto:skolasunshine@gmail.com" className="text-deep-blue hover:underline">skolasunshine@gmail.com</a></p>
-                            <p>Telefon: <a href="tel:+381664330013" className="text-deep-blue hover:underline">+381 66 433 013</a></p>
+                            <p>Telefon: <a href="tel:+38166433013" className="text-deep-blue hover:underline">+381 66 433 013</a></p>
                         </div>
                     </section>
 
@@ -58,7 +58,7 @@ export default function UsloviPage() {
                             <li>Pregled galerije i blog sadržaja</li>
                         </ul>
                         <p className="mt-4">
-                            Zabranjeno je koristiti sajt za bilo koju nezakonitu svrhu ili na način koji bi mogao 
+                            Zabranjeno je koristiti sajt za bilo koju nezakonitu svrhu ili na način koji bi mogao
                             oštetiti, onesposobiti, preopteretiti ili ugroziti naš sajt ili bilo koju treću stranu.
                         </p>
                     </section>
@@ -68,12 +68,12 @@ export default function UsloviPage() {
                             4. Intelektualna svojina
                         </h2>
                         <p>
-                            Sav sadržaj na ovom sajtu, uključujući tekstove, grafike, logotipe, ikone, slike, 
-                            audio zapise i softver, je vlasništvo Sunshine School Smederevo ili njenih dobavljača 
+                            Sav sadržaj na ovom sajtu, uključujući tekstove, grafike, logotipe, ikone, slike,
+                            audio zapise i softver, je vlasništvo Sunshine School Smederevo ili njenih dobavljača
                             i zaštićen je zakonima o autorskim pravima i drugim zakonima o intelektualnoj svojini.
                         </p>
                         <p className="mt-4">
-                            Zabranjeno je kopiranje, reprodukovanje, distribucija, prenos, prikazivanje ili javno 
+                            Zabranjeno je kopiranje, reprodukovanje, distribucija, prenos, prikazivanje ili javno
                             izvođenje bilo kog dela sajta bez prethodne pismene saglasnosti Sunshine School Smederevo.
                         </p>
                     </section>
@@ -83,8 +83,8 @@ export default function UsloviPage() {
                             5. Tačnost informacija
                         </h2>
                         <p>
-                            Nastojimo da sve informacije na sajtu budu tačne i ažurne. Međutim, ne garantujemo 
-                            tačnost, potpunost ili aktuelnost svih informacija. Zadržavamo pravo da u bilo kom 
+                            Nastojimo da sve informacije na sajtu budu tačne i ažurne. Međutim, ne garantujemo
+                            tačnost, potpunost ili aktuelnost svih informacija. Zadržavamo pravo da u bilo kom
                             trenutku izmenimo sadržaj sajta bez prethodne obaveštenosti.
                         </p>
                     </section>
@@ -94,9 +94,9 @@ export default function UsloviPage() {
                             6. Linkovi ka drugim sajtovima
                         </h2>
                         <p>
-                            Naš sajt može sadržati linkove ka drugim web sajtovima koji nisu pod našom kontrolom. 
-                            Ne preuzimamo odgovornost za sadržaj, politiku privatnosti ili prakse bilo kog trećeg sajta. 
-                            Preporučujemo vam da pažljivo pročitate uslove korišćenja i politiku privatnosti svakog 
+                            Naš sajt može sadržati linkove ka drugim web sajtovima koji nisu pod našom kontrolom.
+                            Ne preuzimamo odgovornost za sadržaj, politiku privatnosti ili prakse bilo kog trećeg sajta.
+                            Preporučujemo vam da pažljivo pročitate uslove korišćenja i politiku privatnosti svakog
                             sajta koji posetite.
                         </p>
                     </section>
@@ -106,8 +106,8 @@ export default function UsloviPage() {
                             7. Ograničenje odgovornosti
                         </h2>
                         <p>
-                            Sunshine School Smederevo ne snosi odgovornost za bilo kakve direktne, indirektne, 
-                            slučajne, posebne ili posledične štete koje proizilaze iz korišćenja ili nemogućnosti 
+                            Sunshine School Smederevo ne snosi odgovornost za bilo kakve direktne, indirektne,
+                            slučajne, posebne ili posledične štete koje proizilaze iz korišćenja ili nemogućnosti
                             korišćenja našeg sajta, uključujući gubitak podataka ili dobiti.
                         </p>
                     </section>
@@ -117,8 +117,8 @@ export default function UsloviPage() {
                             8. Kolačići (Cookies)
                         </h2>
                         <p>
-                            Naš sajt koristi kolačiće za poboljšanje funkcionalnosti i korisničkog iskustva. 
-                            Korišćenjem sajta, pristajete na korišćenje kolačića u skladu sa našom 
+                            Naš sajt koristi kolačiće za poboljšanje funkcionalnosti i korisničkog iskustva.
+                            Korišćenjem sajta, pristajete na korišćenje kolačića u skladu sa našom
                             <Link href="/privatnost" className="text-deep-blue hover:underline"> politikom privatnosti</Link>.
                         </p>
                     </section>
@@ -128,8 +128,8 @@ export default function UsloviPage() {
                             9. Promene uslova
                         </h2>
                         <p>
-                            Zadržavamo pravo da u bilo kom trenutku izmenimo ove uslove korišćenja. 
-                            Sve izmene će biti objavljene na ovoj stranici sa datumom poslednje izmene. 
+                            Zadržavamo pravo da u bilo kom trenutku izmenimo ove uslove korišćenja.
+                            Sve izmene će biti objavljene na ovoj stranici sa datumom poslednje izmene.
                             Nastavak korišćenja sajta nakon izmena predstavlja prihvatanje novih uslova.
                         </p>
                     </section>
@@ -139,8 +139,8 @@ export default function UsloviPage() {
                             10. Primenjivo pravo
                         </h2>
                         <p>
-                            Ovi uslovi korišćenja se tumače i primenjuju u skladu sa zakonima Republike Srbije. 
-                            Svi sporovi koji proizilaze iz ili su povezani sa ovim uslovima biće rešavani pred 
+                            Ovi uslovi korišćenja se tumače i primenjuju u skladu sa zakonima Republike Srbije.
+                            Svi sporovi koji proizilaze iz ili su povezani sa ovim uslovima biće rešavani pred
                             nadležnim sudovima u Smederevu, Srbija.
                         </p>
                     </section>
@@ -154,7 +154,7 @@ export default function UsloviPage() {
                         </p>
                         <div className="bg-warm-white p-6 rounded-xl mt-4">
                             <p className="mb-2">Email: <a href="mailto:skolasunshine@gmail.com" className="text-deep-blue hover:underline">skolasunshine@gmail.com</a></p>
-                            <p>Telefon: <a href="tel:+381664330013" className="text-deep-blue hover:underline">+381 66 433 013</a></p>
+                            <p>Telefon: <a href="tel:+38166433013" className="text-deep-blue hover:underline">+381 66 433 013</a></p>
                         </div>
                     </section>
 

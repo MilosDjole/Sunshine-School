@@ -152,7 +152,7 @@ export default function EngleskiJezikPage() {
                                 <Link href="/kontakt" className="btn btn-primary">
                                     Zakaži besplatan probni čas
                                 </Link>
-                                <a href="tel:+381664330013" className="btn btn-secondary">
+                                <a href="tel:+38166433013" className="btn btn-secondary">
                                     Pozovi: 066 433 013
                                 </a>
                             </div>

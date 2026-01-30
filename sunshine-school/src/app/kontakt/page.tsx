@@ -26,19 +26,19 @@ const contactInfo = [
         icon: <Phone className="w-6 h-6" />,
         title: 'Telefon',
         content: '066 433 013',
-        link: 'tel:+381664330013',
+                                < a href = "tel:+38166433013" className = "btn btn-secondary" >
     },
-    {
-        icon: <Mail className="w-6 h-6" />,
+{
+    icon: <Mail className="w-6 h-6" />,
         title: 'Email',
-        content: 'skolasunshine@gmail.com',
-        link: 'mailto:skolasunshine@gmail.com',
+            content: 'skolasunshine@gmail.com',
+                link: 'mailto:skolasunshine@gmail.com',
     },
-    {
-        icon: <Clock className="w-6 h-6" />,
+{
+    icon: <Clock className="w-6 h-6" />,
         title: 'Radno vreme',
-        content: 'Pon-Pet: 17:00-21:00\nSub: 10:00-16:00',
-        link: null,
+            content: 'Pon-Pet: 17:00-21:00\nSub: 10:00-16:00',
+                link: null,
     },
 ];
 

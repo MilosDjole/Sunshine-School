@@ -11,7 +11,7 @@ export default function TopBar() {
                 {/* Left side - Contact info */}
                 <div className="flex items-center gap-4 md:gap-6">
                     <a
-                        href="tel:+381664330013"
+                        href="tel:+38166433013"
                         className="flex items-center gap-2 hover:text-sunshine-yellow transition-colors"
                         aria-label="Pozovite nas"
                     >

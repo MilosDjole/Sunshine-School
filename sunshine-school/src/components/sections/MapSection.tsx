@@ -76,7 +76,7 @@ export default function MapSection() {
                                 <div>
                                     <h3 className="font-display font-semibold text-dark-gray mb-1">Telefon</h3>
                                     <a
-                                        href="tel:+381664330013"
+                                        href="tel:+38166433013"
                                         className="text-deep-blue hover:text-sky-blue transition-colors font-semibold text-lg"
                                     >
                                         066 433 013

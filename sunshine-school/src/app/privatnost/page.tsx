@@ -17,10 +17,10 @@ export default function PrivatnostPage() {
                 <h1 className="font-display text-4xl font-bold text-dark-gray mb-8">
                     Politika privatnosti
                 </h1>
-                
+
                 <div className="prose prose-lg max-w-none text-medium-gray space-y-6">
                     <p className="text-sm text-medium-gray mb-8">
-                    <strong>Poslednja izmena:</strong> 27. januar 2026.
+                        <strong>Poslednja izmena:</strong> 27. januar 2026.
                     </p>
 
                     <section>
@@ -28,8 +28,8 @@ export default function PrivatnostPage() {
                             1. Uvod
                         </h2>
                         <p>
-                            Sunshine School Smederevo ("mi", "nas", "naš") poštuje vašu privatnost i posvećena je zaštiti vaših ličnih podataka. 
-                            Ova politika privatnosti objašnjava kako prikupljamo, koristimo, čuvamo i štitimo vaše lične podatke u skladu sa 
+                            Sunshine School Smederevo ("mi", "nas", "naš") poštuje vašu privatnost i posvećena je zaštiti vaših ličnih podataka.
+                            Ova politika privatnosti objašnjava kako prikupljamo, koristimo, čuvamo i štitimo vaše lične podatke u skladu sa
                             Opštom uredbom o zaštiti podataka (GDPR) i drugim primenjivim propisima Republike Srbije.
                         </p>
                     </section>
@@ -98,7 +98,7 @@ export default function PrivatnostPage() {
                             6. Čuvanje podataka
                         </h2>
                         <p>
-                            Čuvamo vaše lične podatke samo onoliko dugo koliko je potrebno za svrhe navedene u ovoj politici, 
+                            Čuvamo vaše lične podatke samo onoliko dugo koliko je potrebno za svrhe navedene u ovoj politici,
                             ili koliko zahteva zakon. Kada podaci više nisu potrebni, bezbedno ih brišemo.
                         </p>
                     </section>
@@ -124,8 +124,8 @@ export default function PrivatnostPage() {
                             8. Sigurnost podataka
                         </h2>
                         <p>
-                            Preduzimamo odgovarajuće tehničke i organizacione mere za zaštitu vaših ličnih podataka od 
-                            neovlašćenog pristupa, gubitka, uništenja ili promene. Međutim, nijedan metod prenosa preko 
+                            Preduzimamo odgovarajuće tehničke i organizacione mere za zaštitu vaših ličnih podataka od
+                            neovlašćenog pristupa, gubitka, uništenja ili promene. Međutim, nijedan metod prenosa preko
                             interneta ili elektronskog skladištenja nije 100% siguran.
                         </p>
                     </section>
@@ -135,8 +135,8 @@ export default function PrivatnostPage() {
                             9. Kolačići (Cookies)
                         </h2>
                         <p>
-                            Naš sajt koristi kolačiće za poboljšanje korisničkog iskustva. Možete kontrolisati kolačiće 
-                            kroz podešavanja vašeg pretraživača. Više informacija o kolačićima možete pronaći u našoj 
+                            Naš sajt koristi kolačiće za poboljšanje korisničkog iskustva. Možete kontrolisati kolačiće
+                            kroz podešavanja vašeg pretraživača. Više informacija o kolačićima možete pronaći u našoj
                             <Link href="/uslovi" className="text-deep-blue hover:underline"> politici kolačića</Link>.
                         </p>
                     </section>
@@ -146,7 +146,7 @@ export default function PrivatnostPage() {
                             10. Promene politike privatnosti
                         </h2>
                         <p>
-                            Zadržavamo pravo da ažuriramo ovu politiku privatnosti. O svim značajnim promenama 
+                            Zadržavamo pravo da ažuriramo ovu politiku privatnosti. O svim značajnim promenama
                             obavestićemo vas putem sajta ili emaila.
                         </p>
                     </section>
@@ -156,14 +156,14 @@ export default function PrivatnostPage() {
                             11. Kontakt
                         </h2>
                         <p>
-                            Za sva pitanja u vezi sa ovom politikom privatnosti ili za ostvarivanje vaših prava, 
+                            Za sva pitanja u vezi sa ovom politikom privatnosti ili za ostvarivanje vaših prava,
                             možete nas kontaktirati:
                         </p>
                         <div className="bg-warm-white p-6 rounded-xl mt-4">
                             <p className="mb-2"><strong>Sunshine School Smederevo</strong></p>
                             <p className="mb-2">Karađorđeva 44, 11300 Smederevo, Srbija</p>
                             <p className="mb-2">Email: <a href="mailto:skolasunshine@gmail.com" className="text-deep-blue hover:underline">skolasunshine@gmail.com</a></p>
-                            <p>Telefon: <a href="tel:+381664330013" className="text-deep-blue hover:underline">+381 66 433 013</a></p>
+                            <p>Telefon: <a href="tel:+38166433013" className="text-deep-blue hover:underline">+381 66 433 013</a></p>
                         </div>
                     </section>
 
