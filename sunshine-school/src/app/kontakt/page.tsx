@@ -1,15 +1,17 @@
 import { Metadata } from 'next';
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
+import Link from 'next/link';
+import { MapPin, Phone, Mail, Clock, MessageSquare, Send } from 'lucide-react';
+import MapSection from '@/components/sections/MapSection';
 import ContactCTA from '@/components/sections/ContactCTA';
 
 export const metadata: Metadata = {
-    title: 'Kontakt - Sunshine School Smederevo',
+    title: 'Kontakt | Sunshine School Smederevo - Zakažite Probni Čas',
     description: 'Kontaktirajte Sunshine School u Smederevu. Adresa: Karađorđeva 44, 11300 Smederevo. Telefon: 066 433 013. Email: skolasunshine@gmail.com. Radno vreme: Pon-Pet 17:00-21:00, Sub 10:00-16:00. Zakažite probni čas!',
     alternates: {
         canonical: 'https://sunshineschool.rs/kontakt',
     },
     openGraph: {
-        title: 'Kontakt - Sunshine School Smederevo',
+        title: 'Kontaktirajte Sunshine School Smederevo',
         description: 'Kontaktirajte nas u Smederevu. Karađorđeva 44. Telefon: 066 433 013.',
         url: 'https://sunshineschool.rs/kontakt',
     },
@@ -26,170 +28,150 @@ const contactInfo = [
         icon: <Phone className="w-6 h-6" />,
         title: 'Telefon',
         content: '066 433 013',
-                                < a href = "tel:+38166433013" className = "btn btn-secondary" >
+        link: 'tel:+38166433013',
     },
-{
-    icon: <Mail className="w-6 h-6" />,
+    {
+        icon: <Mail className="w-6 h-6" />,
         title: 'Email',
-            content: 'skolasunshine@gmail.com',
-                link: 'mailto:skolasunshine@gmail.com',
+        content: 'skolasunshine@gmail.com',
+        link: 'mailto:skolasunshine@gmail.com',
     },
-{
-    icon: <Clock className="w-6 h-6" />,
+    {
+        icon: <Clock className="w-6 h-6" />,
         title: 'Radno vreme',
-            content: 'Pon-Pet: 17:00-21:00\nSub: 10:00-16:00',
-                link: null,
+        content: 'Pon-Pet: 17:00-21:00\nSub: 10:00-16:00',
+        link: null,
     },
 ];
 
-// Breadcrumb Schema
-const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Početna",
-            "item": "https://sunshineschool.rs"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Kontakt",
-            "item": "https://sunshineschool.rs/kontakt"
-        }
-    ]
-};
-
 export default function KontaktPage() {
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Početna",
+                "item": "https://sunshineschool.rs"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Kontakt",
+                "item": "https://sunshineschool.rs/kontakt"
+            }
+        ]
+    };
+
     return (
-        <>
+        <main className="pt-24 pb-16">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
-            <div className="min-h-screen">
-                {/* Hero */}
-                <section className="bg-gradient-to-br from-deep-blue/10 to-sunshine-yellow/10 py-16">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-3xl mx-auto text-center">
-                            <h1 className="font-display text-4xl md:text-5xl font-bold text-dark-gray mb-6">
-                                Kontaktirajte nas
-                            </h1>
-                            <p className="text-lg text-medium-gray">
-                                Imate pitanja ili želite zakazati probni čas? Kontaktirajte nas putem telefona,
-                                emaila ili popunite formu ispod. Radujemo se vašem javljanju!
-                            </p>
-                        </div>
-                    </div>
-                </section>
 
-                {/* Contact Info Cards */}
-                <section className="py-12 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                            {contactInfo.map((info, index) => (
-                                <div key={index} className="bg-warm-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                                    <div className="w-14 h-14 rounded-full bg-sunshine-yellow/20 text-sunshine-yellow flex items-center justify-center mx-auto mb-4">
-                                        {info.icon}
-                                    </div>
-                                    <h3 className="font-display font-semibold text-dark-gray mb-2">{info.title}</h3>
-                                    {info.link ? (
-                                        <a
-                                            href={info.link}
-                                            className="text-deep-blue hover:text-sky-blue transition-colors whitespace-pre-line"
-                                        >
-                                            {info.content}
-                                        </a>
-                                    ) : (
-                                        <p className="text-medium-gray whitespace-pre-line">{info.content}</p>
-                                    )}
+            {/* Hero Section */}
+            <section className="bg-warm-white py-16 md:py-24">
+                <div className="container-custom">
+                    <div className="max-w-3xl mx-auto text-center">
+                        <h1 className="text-4xl md:text-5xl font-display font-bold text-dark-gray mb-6">
+                            Tu smo za vas
+                        </h1>
+                        <p className="text-xl text-medium-gray leading-relaxed mb-8">
+                            Imate pitanja o našim programima ili želite da zakažete besplatan probni čas?
+                            Naš tim je spreman da odgovori na sva vaša pitanja.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div className="container-custom -mt-12 md:-mt-16">
+                <div className="max-w-6xl mx-auto">
+                    {/* Contact Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                        {contactInfo.map((item, index) => (
+                            <div key={index} className="bg-white rounded-2xl p-8 shadow-sm border border-dark-gray/5 flex flex-col items-center text-center">
+                                <div className="w-12 h-12 bg-sky-blue/10 rounded-xl flex items-center justify-center text-deep-blue mb-6">
+                                    {item.icon}
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Contact Form */}
-                <ContactCTA />
-
-                {/* Map Section */}
-                <section className="py-16 bg-white">
-                    <div className="container mx-auto px-4">
-                        <h2 className="font-display text-3xl font-bold text-dark-gray mb-8 text-center">
-                            Gde se nalazimo
-                        </h2>
-                        <div className="max-w-4xl mx-auto">
-                            <div className="rounded-2xl overflow-hidden shadow-lg h-[400px]">
-                                <iframe
-                                    src="https://maps.google.com/maps?q=Sunshine+School,+Kara%C4%91or%C4%91eva+44,+11300+Smederevo&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Sunshine School lokacija - Karađorđeva 44, Smederevo"
-                                />
+                                <h3 className="text-lg font-display font-bold text-dark-gray mb-3">
+                                    {item.title}
+                                </h3>
+                                <p className="text-medium-gray whitespace-pre-line mb-6 flex-grow">
+                                    {item.content}
+                                </p>
+                                {item.link ? (
+                                    <a
+                                        href={item.link}
+                                        target={item.link.startsWith('http') ? '_blank' : undefined}
+                                        rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                        className="text-deep-blue font-semibold hover:text-sky-blue transition-colors flex items-center gap-2 group"
+                                    >
+                                        Pronađite nas
+                                        <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                    </a>
+                                ) : null}
                             </div>
-                            <div className="flex flex-wrap gap-4 justify-center mt-6">
-                                <a
-                                    href="https://www.google.com/maps/search/?api=1&query=Sunshine+School,+Kara%C4%91or%C4%91eva+44,+11300+Smederevo"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn btn-primary"
-                                >
-                                    Otvori u Google Maps
-                                </a>
-                                <a href="tel:+381664330013" className="btn btn-secondary">
-                                    Pozovi: 066 433 013
-                                </a>
+                        ))}
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                        {/* More Info */}
+                        <div className="space-y-8">
+                            <div className="bg-white rounded-2xl p-8 shadow-sm border border-dark-gray/5">
+                                <h2 className="text-2xl font-display font-bold text-dark-gray mb-6">
+                                    Besplatan probni čas
+                                </h2>
+                                <p className="text-medium-gray mb-8">
+                                    Pre upisa, svako dete ima pravo na besplatan probni čas. Ovo je idealna prilika
+                                    da se upoznamo, odredimo nivo znanja i da dete oseti atmosferu u našoj školi.
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <Link href="/kontakt" className="btn btn-primary">
+                                        Zakaži probni čas
+                                    </Link>
+                                    <a href="tel:+38166433013" className="btn btn-secondary">
+                                        Pozovi: 066 433 013
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="bg-deep-blue rounded-2xl p-8 shadow-lg text-white">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                                        <MessageSquare size={24} />
+                                    </div>
+                                    <h2 className="text-2xl font-display font-bold">Pišite nam</h2>
+                                </div>
+                                <p className="text-sky-blue/80 mb-8 leading-relaxed">
+                                    Odgovaramo na sve upite u najkraćem mogućem roku.
+                                    Slobodno nam pošaljite poruku putem email-a, SMS-a ili Vibera.
+                                </p>
+                                <div className="space-y-4">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-1.5 h-1.5 bg-sunshine-yellow rounded-full"></div>
+                                        <span>Odgovaramo u roku od 24h</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-1.5 h-1.5 bg-sunshine-yellow rounded-full"></div>
+                                        <span>Dostupni na Viberu i WhatsApp-u</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
 
-                {/* Social Media */}
-                <section className="py-16 bg-warm-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="font-display text-2xl font-bold text-dark-gray mb-6">
-                            Pratite nas na društvenim mrežama
-                        </h2>
-                        <div className="flex justify-center gap-4">
-                            <a
-                                href="https://www.instagram.com/skola_mysunshine/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md hover:scale-110 transition-all text-[#E4405F]"
-                                aria-label="Instagram"
-                            >
-                                <Instagram className="w-6 h-6" />
-                            </a>
-                            <a
-                                href="https://www.facebook.com/skola.sunshine"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md hover:scale-110 transition-all text-[#1877F2]"
-                                aria-label="Facebook"
-                            >
-                                <Facebook className="w-6 h-6" />
-                            </a>
-                            <a
-                                href="https://www.tiktok.com/@sunshine_skola_"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md hover:scale-110 transition-all text-black"
-                                aria-label="TikTok"
-                            >
-                                <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor">
-                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-                                </svg>
-                            </a>
+                        {/* Interactive Map */}
+                        <div className="lg:sticky lg:top-24">
+                            <MapSection />
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-        </>
+
+            <div className="mt-16">
+                <ContactCTA />
+            </div>
+        </main>
     );
 }
