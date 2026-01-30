@@ -5,6 +5,8 @@ import TopBar from "@/components/layout/TopBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
@@ -284,6 +286,8 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <GoogleAnalytics />
+        <Analytics />
+        <SpeedInsights />
         <TopBar />
         <Header />
         <main>{children}</main>
