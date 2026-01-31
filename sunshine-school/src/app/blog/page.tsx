@@ -124,7 +124,7 @@ export default function BlogPage() {
 
             {/* Social Media Section */}
             <div className="border-t border-warm-gray/20">
-                <SocialCards images={getImages('social')} />
+                <SocialCards images={getImages('gallery')} />
             </div>
 
             {/* CTA */}
