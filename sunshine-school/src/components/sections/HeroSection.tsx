@@ -13,7 +13,7 @@ export default function HeroSection({ images = [] }: HeroSectionProps) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     // Default image if no images provided or folder is empty
-    const defaultImage = '/hero/1.jpg';
+    const defaultImage = '/hero/HeroPredstava.jpg';
     const displayImages = images.length > 0 ? images : [defaultImage];
 
     useEffect(() => {
