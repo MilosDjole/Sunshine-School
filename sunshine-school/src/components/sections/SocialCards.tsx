@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Instagram, Facebook } from 'lucide-react';
 
@@ -19,10 +20,51 @@ interface SocialCardsProps {
 }
 
 export default function SocialCards({ images = [] }: SocialCardsProps) {
-    // Helper to safely get image or fallback
-    const getImage = (index: number, fallback: string) => {
-        if (images.length > index) return images[index];
-        if (images.length > 0) return images[0]; // If we have at least one image, reuse it (e.g. user provided 1.png)
+    // State to keep track of current images for each card
+    const [activeIndices, setActiveIndices] = useState<number[]>([0, 1, 2]);
+    const [isFading, setIsFading] = useState(false);
+
+    // Function to get distinct random indices
+    const getRandomIndices = (count: number, total: number, current: number[]) => {
+        if (total <= count) return current; // Not enough images to rotate effectively
+
+        const newIndices: number[] = [];
+        const available = Array.from({ length: total }, (_, i) => i);
+
+        // Try to avoid picking currently shown images immediately again if possible
+        let pool = available.filter(i => !current.includes(i));
+        if (pool.length < count) pool = available; // Fallback if pool is too small
+
+        for (let i = 0; i < count; i++) {
+            if (pool.length === 0) pool = available;
+            const randomIndex = Math.floor(Math.random() * pool.length);
+            newIndices.push(pool[randomIndex]);
+            pool.splice(randomIndex, 1);
+        }
+        return newIndices;
+    };
+
+    useEffect(() => {
+        if (images.length < 2) return;
+
+        const interval = setInterval(() => {
+            setIsFading(true);
+
+            // Wait for fade out, then change images
+            setTimeout(() => {
+                setActiveIndices(prev => getRandomIndices(3, images.length, prev));
+                setIsFading(false);
+            }, 500); // 500ms fade out matches CSS transition
+
+        }, 5000); // Change every 5 seconds
+
+        return () => clearInterval(interval);
+    }, [images.length]);
+
+    // Helper to safely get image using the active index
+    const getActiveImage = (cardIndex: number, fallback: string) => {
+        const imageIndex = activeIndices[cardIndex];
+        if (images && images.length > imageIndex) return images[imageIndex];
         return fallback;
     };
 
@@ -34,7 +76,7 @@ export default function SocialCards({ images = [] }: SocialCardsProps) {
             followers: 'Pratite nas',
             description: 'Pratite nas za dnevne trenutke iz učionice i zabavne aktivnosti!',
             profileUrl: 'https://www.instagram.com/skola_mysunshine/',
-            imageSrc: getImage(0, '/gallery/1.jpg'),
+            imageSrc: getActiveImage(0, '/gallery/1.jpg'),
             buttonText: 'Zaprati',
         },
         {
@@ -44,7 +86,7 @@ export default function SocialCards({ images = [] }: SocialCardsProps) {
             followers: 'Pratite nas',
             description: 'Pridružite se našoj zajednici roditelja i saznajte više o našim programima.',
             profileUrl: 'https://www.facebook.com/skola.sunshine',
-            imageSrc: getImage(1, '/gallery/2.jpg'),
+            imageSrc: getActiveImage(1, '/gallery/2.jpg'),
             buttonText: 'Zapratite',
         },
         {
@@ -54,7 +96,7 @@ export default function SocialCards({ images = [] }: SocialCardsProps) {
             followers: 'Pratite nas',
             description: 'Zabavni video sadržaji i edukativni klipovi za decu i roditelje.',
             profileUrl: 'https://www.tiktok.com/@sunshine_skola_',
-            imageSrc: getImage(2, '/gallery/3.jpg'),
+            imageSrc: getActiveImage(2, '/gallery/3.jpg'),
             buttonText: 'Pregledaj još objava',
         },
     ];
@@ -149,7 +191,7 @@ export default function SocialCards({ images = [] }: SocialCardsProps) {
                                     src={card.imageSrc}
                                     alt={`${card.title} preview`}
                                     fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    className={`object-cover transition-all duration-500 ease-in-out ${isFading ? 'opacity-50 scale-95' : 'opacity-100 scale-100'} group-hover:scale-105`}
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
                                 {/* Fallback gradient if no image */}
