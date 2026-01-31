@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Heart, Users, Award, Target, CheckCircle } from 'lucide-react';
 import AboutHero from '@/components/sections/AboutHero';
-import { getImages } from '@/lib/utils';
+import { getImages } from '@/lib/utils'; // Note: User requested gallery images for O Nama page
 
 export const metadata: Metadata = {
     title: 'Sunshine School Smederevo | Škola stranih jezika i dodatne nastave za decu',
@@ -56,7 +56,7 @@ export default function ONamaPage() {
             />
             <div className="min-h-screen">
                 {/* Hero */}
-                <AboutHero images={getImages('social')} />
+                <AboutHero images={getImages('gallery')} />
 
                 {/* Stats */}
                 <section className="py-12 bg-deep-blue text-white">

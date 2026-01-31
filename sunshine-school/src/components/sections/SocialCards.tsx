@@ -34,7 +34,7 @@ export default function SocialCards({ images = [] }: SocialCardsProps) {
             followers: 'Pratite nas',
             description: 'Pratite nas za dnevne trenutke iz učionice i zabavne aktivnosti!',
             profileUrl: 'https://www.instagram.com/skola_mysunshine/',
-            imageSrc: getImage(0, '/social/1.jpg'),
+            imageSrc: getImage(0, '/gallery/1.jpg'),
             buttonText: 'Zaprati',
         },
         {
@@ -44,7 +44,7 @@ export default function SocialCards({ images = [] }: SocialCardsProps) {
             followers: 'Pratite nas',
             description: 'Pridružite se našoj zajednici roditelja i saznajte više o našim programima.',
             profileUrl: 'https://www.facebook.com/skola.sunshine',
-            imageSrc: getImage(1, '/social/2.jpg'),
+            imageSrc: getImage(1, '/gallery/2.jpg'),
             buttonText: 'Zapratite',
         },
         {
@@ -54,7 +54,7 @@ export default function SocialCards({ images = [] }: SocialCardsProps) {
             followers: 'Pratite nas',
             description: 'Zabavni video sadržaji i edukativni klipovi za decu i roditelje.',
             profileUrl: 'https://www.tiktok.com/@sunshine_skola_',
-            imageSrc: getImage(2, '/social/3.jpg'),
+            imageSrc: getImage(2, '/gallery/3.jpg'),
             buttonText: 'Pregledaj još objava',
         },
     ];

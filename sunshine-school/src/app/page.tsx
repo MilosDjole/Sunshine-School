@@ -9,7 +9,7 @@ import { getImages } from "@/lib/utils";
 
 export default function Home() {
   const heroImages = getImages('hero');
-  const socialImages = getImages('social');
+  const socialImages = getImages('gallery'); // Consolidated: Use gallery images for social cards too
 
   return (
     <>
