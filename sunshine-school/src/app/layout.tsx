@@ -110,6 +110,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://sunshineschool.rs",
   },
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 // Schema.org JSON-LD
