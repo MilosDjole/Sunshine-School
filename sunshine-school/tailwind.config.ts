@@ -8,29 +8,7 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        // Primary colors from Sunshine School brand
-        'sunshine-yellow': '#FFD700',
-        'sun-yellow-light': '#FFF176',
-        'sun-yellow-dark': '#FFC107',
-        
-        // Secondary colors
-        'deep-blue': '#1976D2',
-        'sky-blue': '#2196F3',
-        'light-blue': '#BBDEFB',
-        
-        // Accent colors
-        'energy-orange': '#FF6B35',
-        'success-green': '#4CAF50',
-        
-        // Neutral colors
-        'warm-white': '#FFF9E6',
-        'pure-white': '#FFFFFF',
-        'warm-gray': '#F5F5F5',
-        'medium-gray': '#9E9E9E',
-        'dark-gray': '#333333',
-        'text-dark': '#1a1a1a',
-      },
+      // Colors are defined in globals.css @theme block (Tailwind v4 approach)
       fontFamily: {
         display: ['Poppins', 'sans-serif'],
         body: ['Open Sans', 'sans-serif'],
