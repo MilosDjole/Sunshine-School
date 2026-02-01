@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Heart, Users, Award, Target, CheckCircle } from 'lucide-react';
 import AboutHero from '@/components/sections/AboutHero';
@@ -92,7 +91,7 @@ export default function ONamaPage() {
                             </p>
                             <div className="bg-sunshine-yellow/10 rounded-2xl p-8 border border-sunshine-yellow/20">
                                 <blockquote className="text-xl italic text-dark-gray">
-                                    "Svako dete ima potencijal da zasija. Naš posao je da mu pomognemo da ga otkrije."
+                                    &ldquo;Svako dete ima potencijal da zasija. Naš posao je da mu pomognemo da ga otkrije.&rdquo;
                                 </blockquote>
                             </div>
                         </div>

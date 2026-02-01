@@ -5,14 +5,6 @@ import Script from 'next/script';
 export default function GoogleAnalytics() {
     const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-W8QZ4GPZN4";
 
-    if (!gaId) {
-        // Analytics disabled - return null in production or show placeholder in dev
-        if (process.env.NODE_ENV === 'development') {
-            console.log('Google Analytics: NEXT_PUBLIC_GA_ID not set');
-        }
-        return null;
-    }
-
     return (
         <>
             <Script

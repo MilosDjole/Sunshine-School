@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { MapPin, Phone, Clock, ExternalLink } from 'lucide-react';
 
 export default function MapSection() {
@@ -115,12 +116,12 @@ export default function MapSection() {
                         </div>
 
                         {/* CTA */}
-                        <a
+                        <Link
                             href="/kontakt"
                             className="block w-full btn btn-primary text-center mt-6"
                         >
                             Zakaži posetu školi
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

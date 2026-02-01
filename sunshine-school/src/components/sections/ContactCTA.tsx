@@ -84,7 +84,7 @@ export default function ContactCTA() {
             } else {
                 setError(result.error || 'Došlo je do greške prilikom slanja. Molimo pokušajte ponovo.');
             }
-        } catch (error) {
+        } catch {
             setError('Došlo je do greške. Proverite vašu internet konekciju.');
         } finally {
             setIsSubmitting(false);

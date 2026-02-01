@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { BookOpen, Languages, Calculator, GraduationCap, FileText } from 'lucide-react';
 
 interface Program {
     id: string;

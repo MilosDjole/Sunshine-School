@@ -28,7 +28,7 @@ export default function PrivatnostPage() {
                             1. Uvod
                         </h2>
                         <p>
-                            Sunshine School Smederevo ("mi", "nas", "naš") poštuje vašu privatnost i posvećena je zaštiti vaših ličnih podataka.
+                            Sunshine School Smederevo (&ldquo;mi&rdquo;, &ldquo;nas&rdquo;, &ldquo;naš&rdquo;) poštuje vašu privatnost i posvećena je zaštiti vaših ličnih podataka.
                             Ova politika privatnosti objašnjava kako prikupljamo, koristimo, čuvamo i štitimo vaše lične podatke u skladu sa
                             Opštom uredbom o zaštiti podataka (GDPR) i drugim primenjivim propisima Republike Srbije.
                         </p>
@@ -111,7 +111,7 @@ export default function PrivatnostPage() {
                         <ul>
                             <li><strong>Pristup podacima:</strong> možete zatražiti kopiju vaših ličnih podataka</li>
                             <li><strong>Ispravku:</strong> možete zatražiti ispravku netačnih podataka</li>
-                            <li><strong>Brisanje:</strong> možete zatražiti brisanje vaših podataka ("pravo na zaborav")</li>
+                            <li><strong>Brisanje:</strong> možete zatražiti brisanje vaših podataka (&ldquo;pravo na zaborav&rdquo;)</li>
                             <li><strong>Ograničenje obrade:</strong> možete zatražiti ograničenje obrade vaših podataka</li>
                             <li><strong>Prenosivost:</strong> možete zatražiti prenos vaših podataka</li>
                             <li><strong>Prigovor:</strong> možete se usprotiviti obradi vaših podataka</li>
