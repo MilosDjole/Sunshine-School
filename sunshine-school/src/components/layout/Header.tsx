@@ -25,7 +25,7 @@ export default function Header() {
                     <Link href="/" className="flex items-center gap-2 shrink-0">
                         <div className="relative w-16 h-16 md:w-20 md:h-20">
                             <Image
-                                src="/logo.png"
+                                src="/logo.jpg"
                                 alt="Sunshine School - Škola stranih jezika"
                                 fill
                                 className="object-contain"

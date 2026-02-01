@@ -111,8 +111,8 @@ export const metadata: Metadata = {
     canonical: "https://sunshineschool.rs",
   },
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo.jpg",
+    apple: "/logo.jpg",
   },
 };
 
@@ -124,7 +124,7 @@ const jsonLd = {
   description:
     "Škola stranih jezika i dodatne nastave za decu uzrasta od 3 do 14 godina u Smederevu.",
   url: "https://sunshineschool.rs",
-  logo: "https://sunshineschool.rs/logo.png",
+  logo: "https://sunshineschool.rs/logo.jpg",
   image: "https://sunshineschool.rs/og-image.png",
   telephone: "+38166433013",
   email: "skolasunshine@gmail.com",

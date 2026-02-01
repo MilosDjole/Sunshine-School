@@ -31,7 +31,7 @@ export default function Footer() {
                         <Link href="/" className="inline-block mb-4">
                             <div className="relative w-32 h-32">
                                 <Image
-                                    src="/logo.png"
+                                    src="/logo.jpg"
                                     alt="Sunshine School"
                                     fill
                                     className="object-contain"

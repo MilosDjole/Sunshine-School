@@ -145,7 +145,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             "name": "Sunshine School",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://sunshineschool.rs/logo.png"
+                "url": "https://sunshineschool.rs/logo.jpg"
             }
         },
         "mainEntityOfPage": {
