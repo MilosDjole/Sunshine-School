@@ -111,8 +111,11 @@ export const metadata: Metadata = {
     canonical: "https://sunshineschool.rs",
   },
   icons: {
-    icon: "/logo.jpg",
-    apple: "/logo.jpg",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/favicon.png",
   },
 };
 
